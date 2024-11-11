@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Website - Foods</title>
+    <link rel="stylesheet" href="stylesF.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">โลโก้</div>
+        <ul class="menu">
+            <li><a href="index.html">หน้าหลัก</a></li>
+            <li><a href="food.html">อาหารคาว</a></li>
+            <li><a href="sweet.html">อาหารหวาน</a></li>
+            <li><a href="Drinks.html">เครื่องดื่ม</a></li>
+            <li><a href="contact.html">ติดต่อผู้ให้บริการ</a></li>
+            <li><a href="about.html">เกี่ยวกับ</a></li>
+        </ul>
+        <div class="icons">
+            <a href="cart.html" class="cart-icon">
+                🛒<span class="cart-count">0</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Foods Section -->
+    <div class="Foods-section">
+        <h2>อาหารคาว</h2>
+        <div class="product-grid">
+            <div class="product" onclick="addToCart('ปลากะพงทอดน้ำปลา')">
+                <div class="info">
+                    <img src="img/F01.jpg" alt="ปลากะพงทอดน้ำปลา">
+                    <p class="food-name">ปลากะพงทอดน้ำปลา<br>350 บาท</p>
+                    <button class="add-to-cart">เพิ่มในรถเข็น</button>
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('แกงส้มชะอมไข่ใส่กุ้ง')">
+                <div class="info">
+                    <img src="img/F2.webp" alt="แกงส้มชะอมไข่ใส่กุ้ง">
+                    <p class="food-name">แกงส้มชะอมไข่ใส่กุ้ง<br>180 บาท</p>
+                    <button class="add-to-cart">เพิ่มในรถเข็น</button>
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('ผัดฉ่าทะเลรวม')">
+                <div class="info">
+                    <img src="img/F3.jpg" alt="ผัดฉ่าทะเลรวม">
+                    <p class="food-name">ผัดฉ่าทะเลรวม<br>220 บาท</p>
+                    <button class="add-to-cart">เพิ่มในรถเข็น</button>
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('ไข่เจียวปู')">
+                <div class="info">
+                    <img src="img/F4.jfif" alt="ไข่เจียวปู">
+                    <p class="food-name">ไข่เจียวปู<br>200 บาท</p>
+                    <button class="add-to-cart">เพิ่มในรถเข็น</button>
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('ข้าวผัดน้ำพริกลงเรือ')">
+                <div class="info">
+                    <img src="img/F5.jpg" alt="ข้าวผัดน้ำพริกลงเรือ">
+                    <p class="food-name">ข้าวผัดน้ำพริกลงเรือ<br>150 บาท</p>
+                    <button class="add-to-cart">เพิ่มในรถเข็น</button>
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('หมูสามชั้นทอดน้ำปลา')">
+                <div class="info">
+                    <img src="img/F6.jpg" alt="หมูสามชั้นทอดน้ำปลา">
+                    <p class="food-name">หมูสามชั้นทอดน้ำปลา<br>180 บาท</p>
+                    <button class="add-to-cart">เพิ่มในรถเข็น</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="scriptF.js"></script>
+</body>
+</html>

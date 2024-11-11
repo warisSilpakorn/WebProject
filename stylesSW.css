@@ -1,0 +1,154 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: #1a1a1a;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.header .logo {
+    font-size: 1.8em;
+    color: #f9d342;
+    font-weight: bold;
+}
+.header .menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+.header .menu li {
+    display: inline;
+}
+.header .menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.header .menu li a:hover {
+    background-color: #f9d342;
+    color: #1a1a1a;
+}
+.header .icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.cart-icon, .profile-icon {
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+}
+
+/* Sweet Section */
+.Sweet-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+.Sweet-section h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+.Sweet-section .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 4 คอลัมน์ */
+    grid-template-rows: repeat(2, auto); /* 2 แถว */
+    gap: 20px;
+    justify-items: center;
+}
+.Sweet-section .product {
+    width: 100%;
+    max-width: 250px;
+    height: 300px; /* เพิ่มความสูงของกรอบ */
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: flex-end; /* ให้ข้อความอยู่ด้านล่าง */
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.Sweet-section .product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.Sweet-section .product:nth-child(1) {
+    background-image: url('img/Sw1.jpg'); /* รูปที่ 1 */
+}
+.Sweet-section .product:nth-child(2) {
+    background-image: url('img/Sw2.jpg'); /* รูปที่ 2 */
+}
+.Sweet-section .product:nth-child(3) {
+    background-image: url('img/Sw3.jpg'); /* รูปที่ 3 */
+}
+.Sweet-section .product:nth-child(4) {
+    background-image: url('img/Sw4.webp'); /* รูปที่ 4 */
+}
+.Sweet-section .product:nth-child(5) {
+    background-image: url('img/Sw5.jpg'); /* รูปที่ 5 */
+}
+.Sweet-section .product:nth-child(6) {
+    background-image: url('img/Sw6.jpg'); /* รูปที่ 6 */
+}
+.Sweet-section .product .info {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* พื้นหลังสีดำโปร่งใส */
+    padding: 10px;
+    text-align: center;
+    border-radius: 0 0 15px 15px; /* โค้งมุมด้านล่าง */
+}
+.Sweet-name {
+    margin: 0;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+.add-to-cart {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+.add-to-cart:hover {
+    background-color: #e68a00;
+}
+
+/* Footer */
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.footer a {
+    color: #f9d342;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

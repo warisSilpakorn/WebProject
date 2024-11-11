@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>กรอกข้อมูลจัดส่ง</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="checkout">
+        <h1>ข้อมูลการจัดซื้อ/จัดส่ง</h1>
+        <form id="checkout-form">
+            <label for="name">ชื่อ:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="address">ที่อยู่:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="phone">เบอร์โทรศัพท์:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <button type="button" onclick="confirmOrder()">ดำเนินการชำระเงิน</button>
+            <button type="button" onclick="goBack()">ย้อนกลับ</button>
+        </form>
+        <div class="order-summary">
+            <h2>คำสั่งซื้อของคุณ</h2>
+            <p>รวมทั้งหมด: <span id="totalAmount"></span></p>
+        </div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // ดึงข้อมูลจาก localStorage
+            const cart = JSON.parse(localStorage.getItem("cart"));
+            const shippingInfo = JSON.parse(localStorage.getItem("shippingInfo"));
+
+            // แสดงราคารวมทั้งหมด
+            document.getElementById("totalAmount").textContent = cart && cart.total ? cart.total : "0";
+
+            // กรอกข้อมูลที่อยู่ในฟอร์มจาก localStorage
+            if (shippingInfo) {
+                document.getElementById("name").value = shippingInfo.name || "";
+                document.getElementById("address").value = shippingInfo.address || "";
+                document.getElementById("phone").value = shippingInfo.phone || "";
+            }
+        });
+
+        function confirmOrder() {
+            const name = document.getElementById("name").value;
+            const address = document.getElementById("address").value;
+            const phone = document.getElementById("phone").value;
+
+            // ตรวจสอบว่ากรอกข้อมูลครบถ้วน
+            if (!name || !address || !phone) {
+                alert("กรุณากรอกข้อมูลให้ครบ");
+                return;
+            }
+
+            // บันทึกข้อมูลการจัดส่งใน localStorage
+            localStorage.setItem("shippingInfo", JSON.stringify({ name, address, phone }));
+
+            // ไปหน้าชำระเงิน
+            window.location.href = "payment.html";
+        }
+
+        function goBack() {
+            window.location.href = "cart.html"; // กลับไปยังหน้ารถเข็นสินค้า
+        }
+
+        
+    </script>
+</body>
+</html>

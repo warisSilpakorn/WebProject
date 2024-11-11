@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Website - Drinks</title>
+    <link rel="stylesheet" href="stylesSW.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">โลโก้</div>
+        <ul class="menu">
+            <li><a href="index.html">หน้าหลัก</a></li>
+            <li><a href="food.html">อาหารคาว</a></li>
+            <li><a href="sweet.html">อาหารหวาน</a></li>
+            <li><a href="Drinks.html">เครื่องดื่ม</a></li>
+            <li><a href="contact.html">ติดต่อผู้ให้บริการ</a></li>
+            <li><a href="about.html">เกี่ยวกับ</a></li>
+        </ul>
+        <div class="icons">
+            <a href="cart.html" class="cart-icon">
+                🛒<span class="cart-count">0</span>
+            </a>
+            <!-- <span>&#128100;</span>  -->
+        </div>
+    </div>
+
+    <!-- Sweet Section -->
+    <div class="Sweet-section">
+        <h2>อาหารหวาน</h2>                                                       
+        <div class="product-grid">                                              
+            <div class="product" onclick="addToCart('เค้กมะพร้าวอ่อนครีมสด')">
+                <div class="info">
+                <p class="food-name">เค้กมะพร้าวอ่อนครีมสด<br>80 บาท</p>                       
+                <button class="add-to-cart">เพิ่มในรถเข็น</button>                
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('บัวลอยเผือกมะพร้าวอ่อน')">
+                <div class="info">
+                <p class="food-name">บัวลอยเผือกมะพร้าวอ่อน<br>50 บาท</p>
+                <button class="add-to-cart">เพิ่มในรถเข็น</button>
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('ช็อกโกแลตลาวา&ไอศกรีมวานิลลา')">
+                <div class="info">
+                <p class="food-name">ช็อกโกแลตลาวา&ไอศกรีมวานิลลา<br>120 บาท</p>
+                <button class="add-to-cart">เพิ่มในรถเข็น</button>
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('ข้าวเหนียวมะม่วง')">
+                <div class="info">
+                <p class="food-name">ข้าวเหนียวมะม่วง<br>100 บาท</p>
+                <button class="add-to-cart">เพิ่มในรถเข็น</button>
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('เครปสตอเบอร์รี่')">
+                <div class="info">
+                <p class="food-name">เครปสตอเบอร์รี่<br>120 บาท</p>
+                <button class="add-to-cart">เพิ่มในรถเข็น</button>
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('พานาคอตต้ามะพร้าวอ่อน')">
+                <div class="info">
+                <p class="food-name">พานาคอตต้ามะพร้าวอ่อน<br>100 บาท</p>
+                <button class="add-to-cart">เพิ่มในรถเข็น</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scriptSw.js"></script>
+</body>
+</html>

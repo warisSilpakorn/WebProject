@@ -1,0 +1,89 @@
+/* สไตล์พื้นฐานสำหรับ body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* ส่วนหัวของเว็บไซต์ */
+header {
+    background-color: #1a1a1a;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 1.8em;
+    color: #f9d342;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #333;
+    color: #f9d342;
+}
+
+/* สไตล์สำหรับเนื้อหาหลัก */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+/* ส่วนการ์ดข้อมูลโครงการ */
+.project-info {
+    width: 100%;
+    max-width: 800px;
+    background-color: #555;
+    color: #fff;
+    padding: 50px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.project-info h2 {
+    font-size: 2em;
+    color: #f9d342;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.project-info p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #f1f1f1;
+    margin-top: 20px;
+}
+
+/* สไตล์สำหรับแอนิเมชั่นเมื่อ hover */
+.project-info:hover h2 {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}

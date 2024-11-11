@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ชำระเงิน</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="payment">
+        <h2>ชำระเงิน</h2>
+        <button onclick="goBack()">ย้อนกลับ</button>
+        
+        <!-- แสดงข้อมูลผู้รับ -->
+        <div class="shipping-info">
+            <h2>ข้อมูลการจัดส่ง</h2>
+            <p>ชื่อ: <span id="displayName"></span></p>
+            <p>ที่อยู่: <span id="displayAddress"></span></p>
+            <p>เบอร์โทรศัพท์: <span id="displayPhone"></span></p>
+        </div>
+
+        <div class="payment-summary">
+            <h2>คำสั่งซื้อของคุณ</h2>
+            <div id="orderItems">
+                <!-- รายการสินค้าในคำสั่งซื้อจะถูกสร้างโดย JavaScript -->
+            </div>
+            <p>ราคารวมทั้งหมด: <span id="totalAmount">0</span> บาท</p>
+        </div>
+
+        <div class="payment-options">
+            <h2>ช่องทางการชำระเงิน</h2>
+            <button onclick="completePayment('บัตรเครดิต')">บัตรเครดิต</button>
+            <button onclick="completePayment('โอนเงินผ่านธนาคาร')">โอนเงินผ่านธนาคาร</button>
+            <button onclick="completePayment('เก็บเงินปลายทาง')">เก็บเงินปลายทาง</button>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // ตรวจสอบสถานะการล็อกอิน
+            const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+            if (!isLoggedIn) {
+                alert("กรุณาเข้าสู่ระบบก่อนเพื่อทำการชำระเงิน");
+                window.location.href = "login.html";
+                return;
+            }
+
+            // ดึงข้อมูลจาก localStorage
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const shippingInfo = JSON.parse(localStorage.getItem("shippingInfo"));
+
+            // แสดงข้อมูลการจัดส่ง
+            if (shippingInfo) {
+                document.getElementById("displayName").textContent = shippingInfo.name || "";
+                document.getElementById("displayAddress").textContent = shippingInfo.address || "";
+                document.getElementById("displayPhone").textContent = shippingInfo.phone || "";
+            }
+
+            // แสดงรายการสินค้าและราคารวม
+            const orderItemsContainer = document.getElementById("orderItems");
+            let totalAmount = 0;
+            document.getElementById("totalAmount").textContent = cart && cart.total ? cart.total : "0";
+
+            cart.forEach(item => {
+                const itemElement = document.createElement("p");
+                itemElement.textContent = `${item.name} - จำนวน ${item.quantity} ราคา ${item.price * item.quantity} บาท`;
+                orderItemsContainer.appendChild(itemElement);
+                totalAmount += item.price * item.quantity;
+            });
+
+            document.getElementById("totalAmount").textContent = totalAmount;
+
+            localStorage.setItem("totalAmount", totalAmount);  // บันทึกยอดรวมเพื่อให้ใช้ในการชำระเงิน
+        });
+
+        function completePayment(method) {
+            // รีเซตข้อมูลหลังจากชำระเงินสำเร็จ
+            alert("ชำระเงินสำเร็จด้วย " + method);
+        localStorage.removeItem("cart"); // ล้างข้อมูลตะกร้าสินค้า
+        localStorage.removeItem("shippingInfo"); // ล้างข้อมูลการจัดส่ง
+        window.location.href = "order-success.html"; // เปลี่ยนหน้าไปยังหน้าการสั่งซื้อสำเร็จ
+    }
+
+        function goBack() {
+            window.location.href = "checkout.html";
+        }
+    </script>
+</body>
+</html>

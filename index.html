@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Website</title>
+    <link rel="stylesheet" href="stylesND1.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">โลโก้</div>
+        <ul class="menu">
+            <li><a href="index.html">หน้าหลัก</a></li>
+            <li><a href="food.html">อาหารคาว</a></li>
+            <li><a href="sweet.html">อาหารหวาน</a></li>
+            <li><a href="Drinks.html">เครื่องดื่ม</a></li>
+            <li><a href="contact.html">ติดต่อผู้ให้บริการ</a></li>
+            <li><a href="about.html">เกี่ยวกับ</a></li>
+        </ul>
+        <div class="icons">
+            <a href="login.html" class="profile-icon">👤</a>
+            <a href="cart.html" class="cart-icon">
+                🛒<span class="cart-count">0</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Best Seller Section -->
+    <div class="bestseller-section">
+        <h2>BEST SELLER</h2>
+        <div class="product-grid">
+            <div class="product" onclick="addToCart('ปลากะพงทอดน้ำปลา', 350)">
+                <div class="info">
+                    <img src="img/F01.jpg" alt="">
+                    <p class="bestseller-name">ปลากะพงทอดน้ำปลา<br>350 บาท</p>
+                    <button class="add-to-cart">เพิ่มในรถเข็น</button>
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('ไข่เจียวปู', 200)">
+                <div class="info">
+                    <img src="img/F04.jfif" alt="">
+                    <p class="bestseller-name">ไข่เจียวปู<br>200 บาท</p>
+                    <button class="add-to-cart">เพิ่มในรถเข็น</button>
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('หมูสามชั้นทอดน้ำปลา', 180)">
+                <div class="info">
+                    <img src="img/F06.jpg" alt="">
+                    <p class="bestseller-name">หมูสามชั้นทอดน้ำปลา<br>180 บาท</p>
+                    <button class="add-to-cart">เพิ่มในรถเข็น</button>
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('ข้าวเหนียวมะม่วง', 100)">
+                <div class="info">
+                    <img src="img/Sw04.webp" alt="">
+                    <p class="bestseller-name">ข้าวเหนียวมะม่วง<br>100 บาท</p>
+                    <button class="add-to-cart">เพิ่มในรถเข็น</button>
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('ชาเขียว', 40)">
+                <div class="info">
+                    <img src="img/D01.jpg" alt="">
+                    <p class="bestseller-name">ชาเขียว<br>40 บาท</p>
+                    <button class="add-to-cart">เพิ่มในรถเข็น</button>
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('ชาไทย', 40)">
+                <div class="info">
+                    <img src="img/D02.jpg" alt="">
+                    <p class="bestseller-name">ชาไทย<br>40 บาท</p>
+                    <button class="add-to-cart">เพิ่มในรถเข็น</button>
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('อเมริกาโน่', 65)">
+                <div class="info">
+                    <img src="img/D10.jpg" alt="">
+                    <p class="bestseller-name">อเมริกาโน่<br>65 บาท</p>
+                    <button class="add-to-cart">เพิ่มในรถเข็น</button>
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('ลาเต้', 70)">
+                <div class="info">
+                    <img src="img/D12.jpg" alt="">
+                    <p class="bestseller-name">ลาเต้<br>70 บาท</p>
+                    <button class="add-to-cart">เพิ่มในรถเข็น</button>
+                </div>
+            </div>
+        </div>
+        <a href="food.html" class="view-all-btn">ดูสินค้าทั้งหมด</a>
+    </div>
+    <script src="script1.js"></script>
+
+</body>
+</html>

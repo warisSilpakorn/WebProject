@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าเข้าสู่ระบบ</title>
+    <link rel="stylesheet" href="stylelogin.css">
+</head>
+<body>
+    <header>
+        <div class="logo">โลโก้</div>
+        <nav>
+            <a href="index.html">หน้าหลัก</a>
+            <a href="food.html">อาหารคาว</a>
+            <a href="sweet.html">อาหารหวาน</a>
+            <a href="Drinks.html">เครื่องดื่ม</a>
+            <a href="contact.html">ติดต่อผู้ให้บริการ</a>
+            <a href="about.html">เกี่ยวกับ</a>
+        </nav>
+        <!-- <div class="search-cart-user">
+            <input type="text" placeholder="ค้นหา...">
+            <button class="cart">🛒</button>
+        </div> -->
+    </header>
+
+    <section class="login-section">
+        <div class="login-container">
+            <h2>เข้าสู่ระบบ</h2>
+            <form onsubmit="login(event)">
+                <input type="email" placeholder="อีเมล" required>
+                <input type="password" placeholder="รหัสผ่าน" required>
+                <button type="submit">เข้าสู่ระบบ</button>
+            </form>
+            <button onclick="logout()">ออกจากระบบ</button> <!-- ปุ่ม Logout -->
+        </div>
+    </section>
+
+    <script>
+        // ฟังก์ชันเข้าสู่ระบบ
+        function login(event) {
+            event.preventDefault();
+            // ตั้งค่า isLoggedIn ใน localStorage
+            localStorage.setItem("isLoggedIn", "true");
+            alert("เข้าสู่ระบบสำเร็จ");
+            window.location.href = "index.html"; // กลับไปยังหน้าหลัก
+        }
+
+        // ฟังก์ชันออกจากระบบ
+        function logout() {
+            localStorage.removeItem("isLoggedIn"); // ลบสถานะการล็อกอิน
+            alert("ออกจากระบบแล้ว");
+            window.location.href = "login.html"; // อยู่ที่หน้าเข้าสู่ระบบ
+        }
+
+        // ตรวจสอบสถานะการล็อกอิน
+        document.addEventListener("DOMContentLoaded", function() {
+            const isLoggedIn = localStorage.getItem("isLoggedIn");
+            if (isLoggedIn === "true") {
+                document.querySelector(".login-section h2").textContent = "คุณล็อกอินแล้ว";
+            }
+        });
+    </script>
+</body>
+</html>

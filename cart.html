@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รถเข็นสินค้า</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">โลโก้</div>
+        <nav>
+            <a href="index.html">หน้าหลัก</a>
+            <a href="food.html">อาหารคาว</a>
+            <a href="sweet.html">อาหารหวาน</a>
+            <a href="Drinks.html">เครื่องดื่ม</a>
+            <a href="contact.html">ติดต่อผู้ให้บริการ</a>
+            <a href="about.html">เกี่ยวกับ</a>
+        </nav>
+        <div class="cart">
+            <a href="cart.html" class="cart-icon">🛒<span class="cart-count">0</span></a>
+        </div>
+    </header>
+
+    <section class="shopping-cart">
+        <h2>รถเข็นสินค้า</h2>
+        <a href="index.html" class="add-item-btn">เพิ่มสินค้า</a>
+        <div class="cart-items" id="cart-items">
+            <!-- รายการสินค้าในรถเข็นจะถูกสร้างโดย JavaScript -->
+        </div>
+        <button onclick="updateCart()">อัพเดตรถเข็น</button>
+        <div class="cart-summary">
+            <h2>คำสั่งซื้อของคุณ</h2>
+            <p>ราคารวม: <span id="subtotal">0</span></p>
+            <p>ค่าจัดส่ง: <span id="shipping">20</span></p>
+            <p>ราคารวมทั้งหมด: <span id="total">20</span></p>
+            <button onclick="proceedToCheckout()">ทำการชำระเงิน</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

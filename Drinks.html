@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Website - Drinks</title>
+    <style>
+        /* Global styles */
+/* Global styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: #1a1a1a;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header .logo {
+    font-size: 1.8em;
+    color: #f9d342;
+    font-weight: bold;
+}
+
+.header .menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.header .menu li {
+    display: inline;
+}
+
+.header .menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header .menu li a:hover {
+    background-color: #f9d342;
+    color: #1a1a1a;
+}
+
+.header .icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.cart-icon, .profile-icon {
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+}
+
+/* Drinks Section */
+.Drinks-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+
+.Drinks-section h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+
+.Drinks-section .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 คอลัมน์ */
+    grid-template-rows: repeat(2, auto); /* 2 แถว */
+    gap: 20px;
+    justify-items: center;
+}
+
+.Drinks-section .product {
+    width: 100%;
+    max-width: 250px;
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.Drinks-section .product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.Drinks-section .product .info {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* สีดำโปร่งแสง */
+    padding: 10px;
+    text-align: center;
+    border-radius: 0 0 15px 15px; /* โค้งเฉพาะด้านล่าง */
+}
+
+.drinks-name {
+    margin: 0;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+
+.add-to-cart {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #e68a00;
+}
+
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.footer a {
+    color: #f9d342;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.Drinks-section img {
+    width: 100%;
+}
+
+.Drinks-section .product {
+    width: 100%;
+    max-width: 250px;
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Example product image */
+.Drinks-section .product:nth-child(1) {
+    background-image: url('img/D01.jpg'); 
+}
+
+.Drinks-section .product:nth-child(2) {
+    background-image: url('img/D02.jpg');
+}
+.Drinks-section .product:nth-child(3) {
+    background-image: url('img/D03.jpg');
+}
+.Drinks-section .product:nth-child(4) {
+    background-image: url('img/D04.jpg');
+}
+.Drinks-section .product:nth-child(5) {
+    background-image: url('img/D05.jpg');
+}
+.Drinks-section .product:nth-child(6) {
+    background-image: url('img/D06.jpg');
+}
+.Drinks-section .product:nth-child(7) {
+    background-image: url('img/D07.jpg');
+}
+.Drinks-section .product:nth-child(8) {
+    background-image: url('img/D08.jpg');
+}
+.Drinks-section .product:nth-child(9) {
+    background-image: url('img/D09.jpg');
+}
+.Drinks-section .product:nth-child(10) {
+    background-image: url('img/D10.jpg');
+}
+.Drinks-section .product:nth-child(11) {
+    background-image: url('img/D11.jpg');
+}
+.Drinks-section .product:nth-child(12) {
+    background-image: url('img/D12.jpg');
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">โลโก้</div>
+        <ul class="menu">
+            <li><a href="index.html">หน้าหลัก</a></li>
+            <li><a href="food.html">อาหารคาว</a></li>
+            <li><a href="sweet.html">อาหารหวาน</a></li>
+            <li><a href="Drinks.html">เครื่องดื่ม</a></li>
+            <li><a href="contact.html">ติดต่อผู้ให้บริการ</a></li>
+            <li><a href="about.html">เกี่ยวกับ</a></li>
+        </ul>
+        <div class="icons">
+            <a href="cart.html" class="cart-icon">
+                🛒<span class="cart-count">0</span>
+            </a>
+            <!-- <span>&#128100;</span>  -->
+        </div>
+    </div>
+
+    <!-- Drinks Section -->
+    <div class="Drinks-section">
+        <h2>เครื่องดื่ม</h2>
+        <div class="product-grid">
+            <div class="product" onclick="addToCart('ชาไทย')">
+                <div class="info">
+                <p class="drinks-name">ชาไทย<br>40 บาท</p>                       <!-- ชื่อเครื่องดื่ม -->
+                <button class="add-to-cart">เพิ่มในรถเข็น</button>                 <!-- ปุ่มกดเพิ่มในรถเข็น -->
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('ชาเขียว')">
+                <div class="info">
+                <p class="drinks-name">ชาเขียว<br>40 บาท</p>                       <!-- ชื่อเครื่องดื่ม -->
+                <button class="add-to-cart">เพิ่มในรถเข็น</button>                 <!-- ปุ่มกดเพิ่มในรถเข็น -->
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('โกโก้')">
+                <div class="info">
+                <p class="drinks-name">โกโก้<br>40 บาท</p>                       <!-- ชื่อเครื่องดื่ม -->
+                <button class="add-to-cart">เพิ่มในรถเข็น</button>                 <!-- ปุ่มกดเพิ่มในรถเข็น -->
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('แตงโมปั่น')">
+                <div class="info">
+                <p class="drinks-name">แตงโมปั่น<br>40 บาท</p>                       <!-- ชื่อเครื่องดื่ม -->
+                <button class="add-to-cart">เพิ่มในรถเข็น</button>                 <!-- ปุ่มกดเพิ่มในรถเข็น -->
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('น้ำส้มคั้น')">
+                <div class="info">
+                <p class="drinks-name">น้ำส้มคั้น<br>35 บาท</p>                       <!-- ชื่อเครื่องดื่ม -->
+                <button class="add-to-cart">เพิ่มในรถเข็น</button>                 <!-- ปุ่มกดเพิ่มในรถเข็น -->
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('ชามะนาว')">
+                <div class="info">
+                <p class="drinks-name">ชามะนาว<br>40 บาท</p>                       <!-- ชื่อเครื่องดื่ม -->
+                <button class="add-to-cart">เพิ่มในรถเข็น</button>                 <!-- ปุ่มกดเพิ่มในรถเข็น -->
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('บลูฮาวาย')">
+                <div class="info">
+                <p class="drinks-name">บลูฮาวาย<br>60 บาท</p>                       <!-- ชื่อเครื่องดื่ม -->
+                <button class="add-to-cart">เพิ่มในรถเข็น</button>                 <!-- ปุ่มกดเพิ่มในรถเข็น -->
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('ลิ้นจี่โซดา')">
+                <div class="info">
+                <p class="drinks-name">ลิ้นจี่โซดา<br>60 บาท</p>                       <!-- ชื่อเครื่องดื่ม -->
+                <button class="add-to-cart">เพิ่มในรถเข็น</button>                 <!-- ปุ่มกดเพิ่มในรถเข็น -->
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('อัญชันมะนาว')">
+                <div class="info">
+                <p class="drinks-name">อัญชันมะนาว<br>60 บาท</p>                       <!-- ชื่อเครื่องดื่ม -->
+                <button class="add-to-cart">เพิ่มในรถเข็น</button>                 <!-- ปุ่มกดเพิ่มในรถเข็น -->
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('อเมริกาโน่')">
+                <div class="info">
+                <p class="drinks-name">อเมริกาโน่<br>65 บาท</p>                       <!-- ชื่อเครื่องดื่ม -->
+                <button class="add-to-cart">เพิ่มในรถเข็น</button>                 <!-- ปุ่มกดเพิ่มในรถเข็น -->
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('มอคค่า')">
+                <div class="info">
+                <p class="drinks-name">มอคค่า<br>70 บาท</p>                       <!-- ชื่อเครื่องดื่ม -->
+                <button class="add-to-cart">เพิ่มในรถเข็น</button>                 <!-- ปุ่มกดเพิ่มในรถเข็น -->
+                </div>
+            </div>
+            <div class="product" onclick="addToCart('ลาเต้')">
+                <div class="info">
+                <p class="drinks-name">ลาเต้<br>70 บาท</p>                       <!-- ชื่อเครื่องดื่ม -->
+                <button class="add-to-cart">เพิ่มในรถเข็น</button>                 <!-- ปุ่มกดเพิ่มในรถเข็น -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scriptDrink.js"></script>
+
+</body>
+</html>

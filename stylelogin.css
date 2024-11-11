@@ -1,0 +1,128 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #1a1a1a;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #f9d342;  /* ใช้สีที่มีความคอนทราสต์ */
+}
+
+header nav a {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #f9d342;
+}
+
+.search-cart-user {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.search-cart-user input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+    transition: border-color 0.3s ease;
+}
+
+.search-cart-user input[type="text"]:focus {
+    border-color: #f9d342;
+    outline: none;
+}
+
+/* Login form styling */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #f4f4f4;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.login-container:hover {
+    transform: scale(1.05);
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    color: #333;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.login-container input[type="email"]:focus,
+.login-container input[type="password"]:focus {
+    border-color: #f9d342;
+    outline: none;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: #333;
+}
+
+.login-container .register {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 1em;
+}
+
+.login-container .register:hover {
+    text-decoration: underline;
+}
